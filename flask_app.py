@@ -4,9 +4,9 @@ from add_data_form import Add_Form
 import sqlite3
 
 
-app=Flask(__name__) #frameworker that lets you develop web applications easily
+app=Flask(__name__)
 app.secret_key=b'263433102'
-bootstrap=Bootstrap(app) #desenvolver componentes de interface e front-end para sites ligado ambem com a pare de beleza do site
+bootstrap=Bootstrap(app)
 
 @app.route("/")
 def template_test():
@@ -16,11 +16,11 @@ def template_test():
     return render_template('home.html',database_rows=data)
 
 
-@app.route("/add_data",methods=['GET','POST'])# metodos de ler ou alterar as informações
+@app.route("/add_data",methods=['GET','POST'])
 def add_data():
-    form=Add_Form(request.form) #só vamos poder ler(get)
+    form=Add_Form(request.form)
     if request.method=='POST':
-        form_product_ID=form.product_ID.data # o que nós obtemos do ficheiro add_data_form.py
+        form_product_ID=form.product_ID.data
         form_list_ID=form.list_ID.data
         form_prodName=form.prodName.data
         form_date_sold=form.date_sold.data
