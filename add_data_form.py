@@ -3,7 +3,7 @@ from wtforms import StringField, BooleanField, IntegerField
 
 
 class Add_Form(Form):
-    product_ID=IntegerField('Product ID')# está relacionado com o armazenameno dos dados da coluna
+    product_ID=IntegerField('Product ID')
     list_ID=IntegerField('Product List ID')
     prodName=StringField('Product Name')
     date_sold=IntegerField('Date Sold')
