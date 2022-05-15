@@ -1,0 +1,12 @@
+{%extends"bootstrap/base.html"%}<!-- Templates-já está feito por nós, só temos que adicionar o que queremos -->
+{% block content %}
+<h1>Add new row!</h1>
+<form method="post">
+    <p>Product ID {{form.product_ID}}</p>
+    <p>Product List {{form.list_ID}} </p>
+    <p>Product Name {{form.prodName}}</p>
+    <p>Date Sold {{form.date_sold}}</p>
+    <p>Description {{form.descript}}</p>
+    <p><input type="submit" value="Save"></p>
+</form> <!-- Só para desenhar -->
+{% endblock %}
