@@ -16,6 +16,7 @@
         <th>Product Name</th>
         <th>Date Sold</th>
         <th>Description</th>
+        <th>Delete</th>
       </tr>
     </thead>
     <tbody>
@@ -26,6 +27,7 @@
           <td>{{ product[2] }}</td>
           <td>{{ product[3] }}</td>
           <td>{{ product[4] }}</td>
+          <td><a href={{url_for('delete_data',product_id=product[0])}}>DELETE</a></td>
         </tr>
       {% endfor %}
     </tbody>
